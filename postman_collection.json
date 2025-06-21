@@ -1,0 +1,76 @@
+{
+  "info": {
+    "name": "Book Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Books",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/books"
+      }
+    },
+    {
+      "name": "Get Book by ID",
+      "request": {
+        "method": "GET",
+        "url": "{{base_url}}/books/:id"
+      }
+    },
+    {
+      "name": "Add Book",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/books",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\":\"Test Book\",\"author\":\"Test Author\",\"publishedYear\":2023}",
+          "options": { "raw": { "language": "json" } }
+        }
+      }
+    },
+    {
+      "name": "Update Book",
+      "request": {
+        "method": "PUT",
+        "url": "{{base_url}}/books/:id",
+        "body": {
+          "mode": "raw",
+          "raw": "{\"title\":\"Updated Book\",\"author\":\"Updated Author\",\"publishedYear\":2024}",
+          "options": { "raw": { "language": "json" } }
+        }
+      }
+    },
+    {
+      "name": "Delete Book",
+      "request": {
+        "method": "DELETE",
+        "url": "{{base_url}}/books/:id"
+      }
+    },
+    {
+      "name": "Import Books",
+      "request": {
+        "method": "POST",
+        "url": "{{base_url}}/books/import",
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": []
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3000"
+    }
+  ]
+}

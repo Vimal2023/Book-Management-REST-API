@@ -1,0 +1,6 @@
+title,author,publishedYear
+"Book1","Author1",2023
+"Book2","Author2",2024
+"Book3","Author3",invalid
+,"Author4",2025
+"Book5",,2022
